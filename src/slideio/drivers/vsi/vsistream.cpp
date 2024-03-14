@@ -2,9 +2,8 @@
 // It is subject to the license terms in the LICENSE file found in the top-level directory
 // of this distribution and at http://slideio.com/license.html.
 #include "slideio/drivers/vsi/vsistream.hpp"
-
 #include "slideio/core/tools/tools.hpp"
-
+#include <codecvt>
 using namespace slideio::vsi;
 
 
@@ -19,22 +18,13 @@ VSIStream::VSIStream(std::string& filePath): m_size(-1) {
 
 std::string VSIStream::readString(size_t dataSize)
 {
-#if defined(WIN32)
-    std::wstring wstr(dataSize + 1, '\0');
+    std::u16string wstr(dataSize + 1, '\0');
     m_stream->read((char*)wstr.data(), dataSize);
     if (m_stream->bad()) {
         RAISE_RUNTIME_ERROR << "VSI driver: error by reading stream";
     }
     wstr.erase(std::find(wstr.begin(), wstr.end(), '\0'), wstr.end());
-    return Tools::fromWstring(wstr);
-#else
-    std::string wstr(dataSize + 1, '\0');
-    m_stream->read((char*)wstr.data(), dataSize);
-    if (m_stream->bad()) {
-        RAISE_RUNTIME_ERROR << "VSI driver: error by reading stream";
-    }
-    return wstr;
-#endif
+    return Tools::fromUnicode16(wstr);
 }
 
 int64_t VSIStream::getPos() const
