@@ -7,4 +7,4 @@ opencv/4.8.1
 zlib/1.2.13
 pole/1.0.2@slideio/stable
 [options]
-glog:shared=True
+glog*:shared=True

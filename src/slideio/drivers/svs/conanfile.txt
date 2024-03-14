@@ -13,4 +13,4 @@ libpng/1.6.38
 openjpeg/2.5.0
 libiconv/1.17
 [options]
-glog:shared=True
+glog*:shared=True

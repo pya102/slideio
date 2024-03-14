@@ -2,4 +2,4 @@
 boost/1.84.0
 glog/0.7.0
 [options]
-glog:shared=True
+glog*:shared=True

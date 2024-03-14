@@ -9,4 +9,4 @@ xz_utils/5.4.2
 boost/1.84.0
 libwebp/1.2.4
 [options]
-glog:shared=True
+glog*:shared=True

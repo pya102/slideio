@@ -6,4 +6,4 @@ glog/0.7.0
 opencv/4.8.1
 zlib/1.2.13
 [options]
-glog:shared=True
+glog*:shared=True
