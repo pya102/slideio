@@ -71,7 +71,7 @@ def collect_profiles(profile_dir, configuration, compiler=""):
     return profiles
 
 def process_conan_profile(profile, trg_dir, conan_file):
-    generator = "cmake_multi"
+    generator = "CMakeToolchain"
     build_libs = []
     build_libs.append('missing')
     # build_libs.append('dcmtk')
