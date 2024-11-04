@@ -1,5 +1,5 @@
 [requires]
-boost/1.81.0@slideio/stable
-glog/0.6.0@slideio/stable
+boost/1.81.0
+glog/0.6.0
 [options]
 glog:shared=True
