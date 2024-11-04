@@ -78,7 +78,7 @@ def process_conan_profile(profile, trg_dir, conan_file):
      # build_libs.append('ndpi-libtiff')
     command = ['conan','install',
         '-pr',profile,
-        '-if',trg_dir,
+        '-of',trg_dir,
         '-g', generator
         ]
     for lib in build_libs:
@@ -132,7 +132,7 @@ def single_configuration(config_name, build_dir, project_dir):
 
     cmd = [cmake, "-G", generator]
     if architecture is not None:
-        cmd += ["-A", "x64"]
+	cmd += ["-A", "x64"]
 
     for pname, pvalue in cmake_props.items():
         cmd.append(F'-D{pname}={pvalue}')
