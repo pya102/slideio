@@ -7,4 +7,4 @@ opencv/4.1.2
 zlib/1.2.13
 tinyxml2/9.0.0
 [options]
-glog:shared=True
+glog/*:shared=True
