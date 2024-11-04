@@ -5,6 +5,6 @@ compiler.version=10
 compiler.libcxx=libstdc++
 build_type=Release
 [options]
-tinyxml2:shared=False
-gdal:fPIC=True
+tinyxml2/*:shared=False
+gdal/*:fPIC=True
 [tool_requires]
