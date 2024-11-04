@@ -11,4 +11,4 @@ xz_utils/5.4.5
 libjpeg/9e
 libwebp/1.3.2
 [options]
-glog:shared=True
+glog/*:shared=True
