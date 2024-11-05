@@ -9,4 +9,5 @@ build_type=Release
 [options]
 tinyxml2/*:shared=False
 gdal/*:fPIC=True
+libx265/*:assembly=False
 [tool_requires]
