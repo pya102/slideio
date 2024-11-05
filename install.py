@@ -71,7 +71,7 @@ def collect_profiles(profile_dir, configuration, compiler=""):
     return profiles
 
 def process_conan_profile(profile, trg_dir, conan_file):
-    generator = "cmake_multi"
+    generator = "CMakeToolchain"
     build_libs = []
     build_libs.append('missing')
     # build_libs.append('dcmtk')
@@ -132,7 +132,7 @@ def single_configuration(config_name, build_dir, project_dir):
 
     cmd = [cmake, "-G", generator]
     if architecture is not None:
-	cmd += ["-A", "x64"]
+	cmd += ["-A", "s390x"]
 
     for pname, pvalue in cmake_props.items():
         cmd.append(F'-D{pname}={pvalue}')
