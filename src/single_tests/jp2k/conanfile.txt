@@ -1,7 +1,7 @@
 [requires]
 glog/0.6.0
 opencv/4.1.2
-openjpeg/2.5.0
+openjpeg/2.5.2
 libpng/1.6.38
 zlib/1.2.13
 libtiff/4.6.0
