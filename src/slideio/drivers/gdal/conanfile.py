@@ -16,7 +16,7 @@ class GdalRecipe(ConanFile):
         self.requires("libwebp/1.3.2")
         self.requires("libpng/1.6.38")
         self.requires("openjpeg/2.5.2")
-        self.requires("jpegxrcodec/1.0.3")
+        #self.requires("jpegxrcodec/1.0.3")
         self.requires("libiconv/1.17")
         self.requires("libdeflate/1.19")
         self.requires("libcurl/8.5.0")
