@@ -7,7 +7,7 @@ class GdalRecipe(ConanFile):
         self.requires("boost/1.81.0")
         self.requires("sqlite3/3.44.2")
         self.requires("libxml2/2.11.4")
-        self.requires("glog/0.6.0e")
+        self.requires("glog/0.6.0")
         self.requires("opencv/4.1.2")
         self.requires("zlib/1.2.13")
         self.requires("xz_utils/5.4.5")
