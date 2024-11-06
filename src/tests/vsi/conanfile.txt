@@ -7,4 +7,4 @@ zlib/1.2.13
 libtiff/4.6.0
 libwebp/1.3.2
 [options]
-glog:shared=True
+glog/*:shared=True
