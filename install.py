@@ -132,7 +132,7 @@ def single_configuration(config_name, build_dir, project_dir):
 
     cmd = [cmake, "-G", generator]
     if architecture is not None:
-	cmd += ["-A", "s390x"]
+        cmd += ["-A", "s390x"]
 
     for pname, pvalue in cmake_props.items():
         cmd.append(F'-D{pname}={pvalue}')
